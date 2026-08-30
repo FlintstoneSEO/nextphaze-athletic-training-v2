@@ -44,6 +44,14 @@
 - Decision: enlarge two-column editorial imagery to approximately half of the content width and separate career-timeline labels from the phase line with dedicated spacing.
 - Rationale: the supplied photography should remain a visual anchor, and timeline labels must not collide with markers at any supported viewport.
 
+## 2026-08-30 — Mobile hero refinement and editorial scoreboard
+
+- Decision: reduce and stabilize the mobile hero display size, prevent mid-word title breaks, widen its usable text area, and move the action image focal point toward the right side of the source image.
+- Rationale: the prior mobile scale forced awkward word wrapping and obscured too much of the authentic action image; the revised overlay keeps the text readable while revealing more of the photograph.
+- Decision: present the approved collegiate totals as one bordered editorial scoreboard, using a two-plus-one mobile composition, field-line texture, and an integrated combined-record label.
+- Status: client selected the recommended Editorial Scoreboard direction (Option A).
+- Rationale: the statistics remain discrete and scannable without becoming three tall, disconnected mobile rows, while the source qualification stays visibly attached to the figures.
+
 ## 2026-08-30 — Astro as the single application architecture
 
 - Decision: retain the content-driven Astro implementation and remove the independently maintained root HTML routes and duplicate root assets.

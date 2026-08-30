@@ -53,13 +53,18 @@ content_blocks:
     label: "Collegiate career totals"
     content: |-
       <section class="section stat-field" aria-labelledby="numbers-title">
-            <div class="container"><p class="eyebrow">The record / 03</p><h2 id="numbers-title">Collegiate career totals</h2><p class="muted">Combined Northwood University + Western Michigan University</p></div>
-            <div class="stats">
-              <div class="stat"><span class="stat-value">139</span><span class="stat-label">Receptions</span></div>
-              <div class="stat"><span class="stat-value">1,936</span><span class="stat-label">Receiving yards</span></div>
-              <div class="stat"><span class="stat-value">18</span><span class="stat-label">Receiving touchdowns</span></div>
+            <div class="container stat-scoreboard">
+              <header class="stat-heading">
+                <div><p class="eyebrow">The record / 03</p><h2 id="numbers-title">Collegiate<br>career totals</h2></div>
+                <p class="stat-context"><span>Combined record</span>Northwood University<br>+ Western Michigan University</p>
+              </header>
+              <dl class="stats">
+                <div class="stat"><dt class="stat-label">Receptions</dt><dd class="stat-value">139</dd></div>
+                <div class="stat"><dt class="stat-label">Receiving yards</dt><dd class="stat-value">1,936</dd></div>
+                <div class="stat stat-wide"><dt class="stat-label">Receiving touchdowns</dt><dd class="stat-value">18</dd></div>
+              </dl>
+              <p class="stat-note">Northwood totals are reported by Western Michigan Athletics. Combined figures are never represented as Western Michigan-only statistics.</p>
             </div>
-            <div class="container"><p class="stat-note">Northwood totals are reported by Western Michigan Athletics. Combined figures are never represented as Western Michigan-only statistics.</p></div>
           </section>
   - _type: visual_section
     label: "Two ways to train."
