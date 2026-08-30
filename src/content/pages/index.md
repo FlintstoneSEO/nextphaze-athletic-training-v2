@@ -1,6 +1,6 @@
 ---
 _schema: page_builder
-title: "NextPhaze Athletic Training | Speed, Agility &amp; WR Training"
+title: "NextPhaze Athletic Training | Speed, Agility & WR Training"
 description: "Build speed, footwork, agility, confidence and position-specific skill with NextPhaze Athletic Training, led by former Western Michigan WR Carrington Thompson."
 content_blocks:
   - _type: visual_section

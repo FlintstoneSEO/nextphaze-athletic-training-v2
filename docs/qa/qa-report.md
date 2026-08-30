@@ -2,15 +2,15 @@
 
 Review date: 2026-08-30
 
-Status: **No-go for public launch; implementation complete for stakeholder review.** The site is usable as a local/static release candidate, but production-domain setup, legal/business inputs, booking/payment integration, media rights confirmation, and screenshot-based viewport review remain unresolved.
+Status: **Astro migration passes programmatic QA; no-go for public launch.** Astro is now the only application architecture. Production-domain setup, legal/business inputs, booking/payment integration, media rights confirmation, and browser-based viewport review remain unresolved.
 
 ## Evidence produced
 
-- `npm.cmd run check`: passed for six routes; checks one H1, unique titles/descriptions, canonicals, main landmarks, skip links, internal links, image dimensions/alt attributes, required assets, and prohibited publication claims.
+- `npm run check`: passed for six indexable Astro routes plus `/404`; it builds first, then checks one H1, unique titles/descriptions, canonicals, main landmarks, skip links, internal links, image dimensions/alt attributes, required public assets, prohibited publication text, and absence of legacy static source files.
 - `node --check`: passed for the shared interaction script and all Node utility scripts.
-- Local HTTP responses: 200 for `/`, `/about/`, `/training/`, `/booking/`, `/media/`, and `/contact/`; 404 for a missing route.
+- Astro generated `/`, `/about/`, `/training/`, `/booking/`, `/media/`, `/contact/`, and `/404.html`; live HTTP response testing remains part of browser QA.
 - Production HTML scan: no `[NEEDS CLIENT INPUT]`, `[PLACEHOLDER]`, exact AFL/IFL experience claim, or `aggregateRating` text.
-- Asset inventory: 563,509 bytes across shared CSS, JavaScript, logo, and responsive image variants; a representative home load does not request every derivative.
+- Deployable assets have one source under `public/assets/`; Astro copies them to `dist/assets/`, and the obsolete root duplicate was removed.
 - Browser screenshot evidence: not produced because no in-app or connected browser was available. No visual score, Lighthouse metric, axe result, or browser/device pass is claimed.
 
 ## Findings and remediation
@@ -18,7 +18,7 @@ Status: **No-go for public launch; implementation complete for stakeholder revie
 ### QA-01 — Mobile navigation initially remained open
 
 - Severity: high
-- Element or file: `assets/js/site.js`, global primary navigation
+- Element or file: `public/assets/js/site.js`, global primary navigation
 - Viewport, route, or state: under 800px, initial page load
 - Observed problem: the mobile menu button appeared, but navigation was not initially collapsed.
 - Evidence: code inspection showed `hidden` was only changed after a breakpoint-change event or button click.
@@ -30,7 +30,7 @@ Status: **No-go for public launch; implementation complete for stakeholder revie
 ### QA-02 — Saturday requests allowed times outside verified availability
 
 - Severity: high
-- Element or file: `assets/js/site.js`, booking preferred date/time
+- Element or file: `public/assets/js/site.js`, booking preferred date/time
 - Viewport, route, or state: `/booking/`, Saturday selected
 - Observed problem: any time could be submitted even though Saturday availability is 9:00 AM–12:00 PM.
 - Evidence: the first validation pass rejected Sundays but did not validate the Saturday time.
@@ -54,11 +54,11 @@ Status: **No-go for public launch; implementation complete for stakeholder revie
 ### QA-04 — Production domain and XML sitemap are unresolved
 
 - Severity: blocker
-- Element or file: `robots.txt`, canonical strategy, `scripts/generate-sitemap.mjs`
+- Element or file: `public/robots.txt`, canonical strategy, `scripts/generate-sitemap.mjs`
 - Viewport, route, or state: production crawl/indexing
 - Observed problem: no verified production origin exists, so an absolute sitemap cannot be published truthfully. Pages use origin-relative canonical URLs.
-- Evidence: the source brief and repository contain no confirmed domain; `robots.txt` intentionally omits a live Sitemap directive.
-- Exact recommended change: after confirming the production domain, run `npm run sitemap -- https://confirmed-domain`, add `Sitemap: https://confirmed-domain/sitemap.xml` to `robots.txt`, and verify the deployed canonical resolution.
+- Evidence: the source brief and repository contain no confirmed domain; `public/robots.txt` intentionally omits a live Sitemap directive.
+- Exact recommended change: after confirming the production domain, run `npm run sitemap -- https://confirmed-domain`, add `Sitemap: https://confirmed-domain/sitemap.xml` to `public/robots.txt`, and verify the deployed canonical resolution.
 - Reason: sitemap `<loc>` values require absolute URLs, and inventing a domain would violate the truthfulness rule.
 - Expected outcome: valid sitemap discovery and consistent canonical URLs on the deployed origin.
 - Verification method: fetch deployed pages and sitemap, validate 200 status/canonical targets, and submit the sitemap in the relevant search-console account.
@@ -78,7 +78,7 @@ Status: **No-go for public launch; implementation complete for stakeholder revie
 ### QA-06 — Media publication rights need confirmation
 
 - Severity: blocker
-- Element or file: `assets/images/*`, `docs/research/media-provenance.md`
+- Element or file: `public/assets/images/*`, `docs/research/media-provenance.md`
 - Viewport, route, or state: public deployment
 - Observed problem: the three local images are client-supplied, but ownership, creator credit and subject consent are not confirmed.
 - Evidence: no license or written permission file exists in the repository.
@@ -105,6 +105,6 @@ Status: **No-go for public launch; implementation complete for stakeholder revie
 - Responsive design: intrinsic grids, narrow-screen recomposition, table overflow containment and 320px rules are implemented; rendered widths remain unverified.
 - Accessibility: semantic landmarks, native controls, one H1, skip links, visible focus, required labels, status region, reduced motion and explicit image dimensions are present; automated/manual browser tests remain unverified.
 - Technical SEO: unique metadata, semantic links, relative canonicals, 200 routes, 404 behavior and verified-only Organization/Person schema pass static checks; sitemap/domain is blocked.
-- Performance: no framework, fonts, third parties or embeds; shared asset inventory is 551 KB (uncompressed on disk) with responsive JPEG variants; Lighthouse/Core Web Vitals are not claimed.
+- Performance: Astro generates static HTML with no client UI framework, external fonts, third parties or embeds; shared asset inventory is 551 KB (uncompressed on disk) with responsive JPEG variants; Lighthouse/Core Web Vitals are not claimed.
 - Anti-template: pass at the code/structure level. The design uses an asymmetric image-led hero, editorial ledgers, phase rows, scorelines and square program comparison rather than glass panels, gradient blobs or repeated generic cards. Rendered distinctiveness remains to be reviewed.
 - Integrated QA: no-go for public launch until QA-03 through QA-07 are resolved; suitable for local stakeholder review now.

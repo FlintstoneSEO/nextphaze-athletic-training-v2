@@ -14,14 +14,17 @@
   "business": {
     "offer": "Focused athletic development for speed, footwork, agility, movement quality, position-specific skill, discipline, confidence, and conditioning.",
     "primaryConversion": "Book a Session",
-    "services": ["Group training", "One-on-one training"],
+    "services": [
+      "Group training",
+      "One-on-one training"
+    ],
     "pricing": {
       "group": "$30 per athlete",
       "oneOnOne": "$60 per athlete"
     },
     "availability": {
       "mondayFriday": "Flexible / open availability, subject to confirmed bookings",
-      "saturday": "9:00 AM–12:00 PM"
+      "saturday": "9:00 AM\u201312:00 PM"
     },
     "cancellation": "Bookings may be cancelled up to 12 hours before the scheduled session.",
     "contact": {
@@ -60,16 +63,41 @@
     "2018 MPIF Offensive Rookie of the Year"
   ],
   "brand": {
-    "palette": ["black / near-black", "metallic gold", "white / warm neutral"],
+    "palette": [
+      "black / near-black",
+      "metallic gold",
+      "white / warm neutral"
+    ],
     "media": "Authentic client-supplied Carrington imagery is the visual anchor.",
-    "motifs": ["#15", "route geometry", "field/timing marks", "progression steps", "editorial stat typography"],
-    "avoid": ["generic stock gym imagery", "glassmorphism", "gradient blobs", "repetitive card grids", "fabricated social proof", "oversized centered hero by default"]
+    "motifs": [
+      "#15",
+      "route geometry",
+      "field/timing marks",
+      "progression steps",
+      "editorial stat typography"
+    ],
+    "avoid": [
+      "generic stock gym imagery",
+      "glassmorphism",
+      "gradient blobs",
+      "repetitive card grids",
+      "fabricated social proof",
+      "oversized centered hero by default"
+    ]
   },
   "technical": {
-    "startingState": "No application existed; only source and standards files were present.",
-    "chosenStack": "Dependency-free semantic multi-page HTML, shared CSS, and minimal progressive-enhancement JavaScript.",
-    "why": "The content is mostly static, the repository has no stack to preserve, and a zero-dependency build minimizes payload, hosting constraints, and maintenance risk while leaving booking integration boundaries explicit.",
-    "targets": ["WCAG 2.2 AA", "320px reflow", "keyboard operation", "visible focus", "LCP ≤ 2.5s lab target", "INP ≤ 200ms target", "CLS ≤ 0.1 target"]
+    "startingState": "The repository contained an Astro implementation plus an obsolete, independently maintained static HTML copy.",
+    "chosenStack": "Astro static output with content collections, CloudCannon editing, shared CSS, and minimal progressive-enhancement JavaScript.",
+    "why": "Astro provides one content-driven source of truth while preserving static performance, CloudCannon editability, and an explicit external booking integration boundary.",
+    "targets": [
+      "WCAG 2.2 AA",
+      "320px reflow",
+      "keyboard operation",
+      "visible focus",
+      "LCP \u2264 2.5s lab target",
+      "INP \u2264 200ms target",
+      "CLS \u2264 0.1 target"
+    ]
   },
   "assumptions": [
     "The supplied image files may be used for this build because the client placed them in the project; ownership/production rights still require confirmation before launch.",

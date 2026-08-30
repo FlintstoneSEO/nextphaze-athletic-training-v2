@@ -1,8 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 import BlockRenderer from "../components/BlockRenderer.astro";
-import SiteHeader from "../components/SiteHeader.astro";
-import SiteFooter from "../components/SiteFooter.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
 
 export async function getStaticPaths() {
   const pages = await getCollection("pages");
@@ -13,36 +12,34 @@ export async function getStaticPaths() {
 }
 
 const { page } = Astro.props;
+const path = page.id === "index" ? "/" : `/${page.id}/`;
+const image = page.id === "about" ? "/assets/images/carrington-portrait-550.jpg" : undefined;
+const structuredData = page.id === "index"
+  ? {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      name: "NextPhaze Athletic Training",
+      email: "carrington.j.Thompson15@gmail.com",
+      telephone: "+1-810-869-8554",
+      founder: { "@type": "Person", name: "Carrington Thompson", jobTitle: "Athletic trainer" },
+    }
+  : page.id === "about"
+    ? {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        name: "Carrington Thompson",
+        jobTitle: "Athletic trainer",
+        affiliation: { "@type": "Organization", name: "NextPhaze Athletic Training" },
+        alumniOf: [
+          { "@type": "CollegeOrUniversity", name: "Northwood University" },
+          { "@type": "CollegeOrUniversity", name: "Western Michigan University" },
+        ],
+      }
+    : undefined;
 ---
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title set:html={page.data.title} />
-    <meta name="description" content={page.data.description} />
-    <link rel="stylesheet" href="/assets/css/site.css?v=20260830-6" />
-  </head>
-  <body>
-    <editable-component data-component="site_header" data-prop="@data[site]">
-      <SiteHeader />
-    </editable-component>
-    <main id="main-content">
-      <div data-editable="array" data-prop="content_blocks" data-component-key="_type">
-        {page.data.content_blocks.map((block) => <BlockRenderer block={block} />)}
-      </div>
-    </main>
-    <editable-component data-component="site_footer" data-prop="@data[site]">
-      <SiteFooter />
-    </editable-component>
-    <script type="module" src="/assets/js/site.js"></script>
-    <script>
-      if (window.inEditorMode) {
-        import("../cloudcannon/registerComponents").catch((error) => {
-          console.warn("Failed to load CloudCannon component registration:", error);
-        });
-      }
-    </script>
-  </body>
-</html>
+<BaseLayout title={page.data.title} description={page.data.description} canonicalPath={path} image={image} structuredData={structuredData}>
+  <div data-editable="array" data-prop="content_blocks" data-component-key="_type">
+    {page.data.content_blocks.map((block) => <BlockRenderer block={block} />)}
+  </div>
+</BaseLayout>

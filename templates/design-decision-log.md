@@ -1,8 +1,8 @@
 # Design decision log
 
-## 2026-08-30 — Static multi-page architecture
+## 2026-08-30 — Initial static multi-page architecture (superseded)
 
-- Decision: use dependency-free HTML, CSS, and minimal JavaScript.
+- Superseded decision: use dependency-free HTML, CSS, and minimal JavaScript.
 - Context: no existing application or framework exists; the site is content-led and the booking backend is undecided.
 - Rationale: lowest runtime/payload risk, broad hosting compatibility, transparent integration boundary, and easy maintenance.
 - Consequence: repeated shell markup exists across pages; shared data and behavior are centralized where practical, but a future CMS/framework migration may componentize it further.
@@ -43,3 +43,11 @@
 - Rationale: the split composition becomes too constrained at intermediate widths, while the overlay treatment preserves the first-viewport message and accessible text contrast without hiding the client-supplied image.
 - Decision: enlarge two-column editorial imagery to approximately half of the content width and separate career-timeline labels from the phase line with dedicated spacing.
 - Rationale: the supplied photography should remain a visual anchor, and timeline labels must not collide with markers at any supported viewport.
+
+## 2026-08-30 — Astro as the single application architecture
+
+- Decision: retain the content-driven Astro implementation and remove the independently maintained root HTML routes and duplicate root assets.
+- Context: the repository had both Astro source and a complete static HTML copy, so content, metadata, scripts, and assets could drift.
+- Rationale: `src/pages`, `src/layouts`, `src/components`, `src/content`, and `src/data` now provide one source of truth while Astro generates deployable HTML into `dist/`.
+- Preserved: Championship Editorial visual direction, six-page information architecture, CloudCannon page builder, verified content, responsive imagery, booking-request behavior, accessibility, and SEO metadata.
+- Deferred: production origin, live sitemap URL, and the third-party booking/payment platform remain unresolved rather than guessed.

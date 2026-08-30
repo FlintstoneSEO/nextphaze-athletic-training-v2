@@ -1,0 +1,67 @@
+---
+import SiteHeader from "../components/SiteHeader.astro";
+import SiteFooter from "../components/SiteFooter.astro";
+import siteData from "../data/site.json";
+
+interface Props {
+  title: string;
+  description: string;
+  canonicalPath?: string;
+  image?: string;
+  noindex?: boolean;
+  structuredData?: Record<string, unknown> | Record<string, unknown>[];
+}
+
+const {
+  title,
+  description,
+  canonicalPath = Astro.url.pathname,
+  image = "/assets/images/carrington-action-971.jpg",
+  noindex = false,
+  structuredData,
+} = Astro.props;
+const canonical = new URL(canonicalPath, Astro.url.origin);
+const socialImage = new URL(image, Astro.url.origin);
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#0b0b0c" />
+    {noindex && <meta name="robots" content="noindex" />}
+    <link rel="canonical" href={canonical} />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={socialImage} />
+    <link rel="icon" href={siteData.brand.logo} />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="stylesheet" href="/assets/css/site.css" />
+    <script is:inline>document.documentElement.classList.add("js");</script>
+    {structuredData && <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />}
+  </head>
+  <body>
+    <editable-component data-component="site_header" data-prop="@data[site]">
+      <SiteHeader currentPath={Astro.url.pathname} />
+    </editable-component>
+    <main id="main-content">
+      <slot />
+    </main>
+    <editable-component data-component="site_footer" data-prop="@data[site]">
+      <SiteFooter />
+    </editable-component>
+    <script type="module" src="/assets/js/site.js"></script>
+    <script>
+      if (window.inEditorMode) {
+        import("../cloudcannon/registerComponents").catch((error) => {
+          console.warn("Failed to load CloudCannon component registration:", error);
+        });
+      }
+    </script>
+  </body>
+</html>
