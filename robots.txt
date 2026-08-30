@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Add Sitemap after the production domain is confirmed:
+# npm run sitemap -- https://confirmed-domain.example

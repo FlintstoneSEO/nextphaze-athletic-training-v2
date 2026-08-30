@@ -1,0 +1,90 @@
+{
+  "project": {
+    "name": "NextPhaze Athletic Training",
+    "owner": "Carrington Thompson",
+    "status": "implementation brief complete with visible launch blockers",
+    "sourceOfTruth": "Project_Source/NextPhaze_Athletic_Training_Website_Content_Research_Brief.docx",
+    "preparedFrom": [
+      "the complete source DOCX, including tables",
+      "the repository AGENTS.md",
+      "three client-supplied image files",
+      "public-source verification and category research performed 2026-08-30"
+    ]
+  },
+  "business": {
+    "offer": "Focused athletic development for speed, footwork, agility, movement quality, position-specific skill, discipline, confidence, and conditioning.",
+    "primaryConversion": "Book a Session",
+    "services": ["Group training", "One-on-one training"],
+    "pricing": {
+      "group": "$30 per athlete",
+      "oneOnOne": "$60 per athlete"
+    },
+    "availability": {
+      "mondayFriday": "Flexible / open availability, subject to confirmed bookings",
+      "saturday": "9:00 AM–12:00 PM"
+    },
+    "cancellation": "Bookings may be cancelled up to 12 hours before the scheduled session.",
+    "contact": {
+      "email": "carrington.j.Thompson15@gmail.com",
+      "phone": "810-869-8554"
+    }
+  },
+  "audiences": {
+    "primary": "Parents and guardians evaluating coaching credibility, fit, cost, safety, logistics, and booking ease.",
+    "secondary": "Athletes who need the brand to feel competitive, legitimate, aspirational, and relevant to progression.",
+    "topTasks": [
+      "Understand what is trained",
+      "Verify why Carrington is credible",
+      "Compare group and one-on-one training",
+      "See current price and availability",
+      "Book or contact Carrington"
+    ]
+  },
+  "positioning": {
+    "statement": "NextPhaze Athletic Training develops athletes through focused speed, movement, discipline, position-specific skill work, and competitive preparation, led by former Western Michigan #15 Carrington Thompson, a MAC Champion and professional indoor football champion.",
+    "formalTagline": "Strength. Speed. Discipline. Next.",
+    "campaignMessage": "Your current level is not your final level.",
+    "brandIdea": "Development happens one phase at a time.",
+    "proofRole": "Carrington's career supports the training offer; it does not replace the training offer."
+  },
+  "verifiedProof": [
+    "Western Michigan University wide receiver #15",
+    "2016 MAC Champion and Cotton Bowl team member",
+    "50 receptions, 726 yards, and 8 touchdowns at Western Michigan",
+    "2016: 42 receptions, 637 yards, and 6 touchdowns",
+    "8 receptions, 177 yards, and 2 touchdowns vs. Eastern Michigan",
+    "Northwood totals reported by WMU: 89 receptions, 1,210 yards, and 10 touchdowns",
+    "Combined Northwood + Western Michigan totals: 139 receptions, 1,936 yards, and 18 touchdowns",
+    "Professional indoor and arena football experience with the West Michigan Ironmen",
+    "2018 MPIF Champion; five receiving touchdowns in the title game",
+    "2018 MPIF Offensive Rookie of the Year"
+  ],
+  "brand": {
+    "palette": ["black / near-black", "metallic gold", "white / warm neutral"],
+    "media": "Authentic client-supplied Carrington imagery is the visual anchor.",
+    "motifs": ["#15", "route geometry", "field/timing marks", "progression steps", "editorial stat typography"],
+    "avoid": ["generic stock gym imagery", "glassmorphism", "gradient blobs", "repetitive card grids", "fabricated social proof", "oversized centered hero by default"]
+  },
+  "technical": {
+    "startingState": "No application existed; only source and standards files were present.",
+    "chosenStack": "Dependency-free semantic multi-page HTML, shared CSS, and minimal progressive-enhancement JavaScript.",
+    "why": "The content is mostly static, the repository has no stack to preserve, and a zero-dependency build minimizes payload, hosting constraints, and maintenance risk while leaving booking integration boundaries explicit.",
+    "targets": ["WCAG 2.2 AA", "320px reflow", "keyboard operation", "visible focus", "LCP ≤ 2.5s lab target", "INP ≤ 200ms target", "CLS ≤ 0.1 target"]
+  },
+  "assumptions": [
+    "The supplied image files may be used for this build because the client placed them in the project; ownership/production rights still require confirmation before launch.",
+    "Carrington Thompson is the preferred display name until the client confirms whether to use 'Sr.'.",
+    "The site may present a booking-request interface and honest email/phone fallback, but may not claim live scheduling, payment, notifications, or calendar sync until a provider and credentials exist.",
+    "The proposed six-route architecture is approved for implementation under the prompt's autonomous-run clause, not by the client."
+  ],
+  "launchBlockers": [
+    "Training location, service city/radius, venue type, parking, and access instructions",
+    "Athlete age range and parent-on-site requirements",
+    "Session duration and group capacity",
+    "Cancellation/reschedule/no-show/refund/weather/late-arrival details beyond the verified 12-hour cancellation window",
+    "Payment processor, fees/taxes, and online-payment credentials",
+    "Waiver/release and privacy language supplied or approved by counsel",
+    "Media ownership/permissions and original high-resolution files",
+    "Any credentials, certifications, coaching affiliations, testimonials, or athlete outcomes intended for publication"
+  ]
+}

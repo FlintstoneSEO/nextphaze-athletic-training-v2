@@ -1,0 +1,351 @@
+NEXTPHAZE ATHLETIC TRAINING — FULL WEBSITE REBUILD USING THE FRONTEND DESIGN AGENT
+
+You are working on the NextPhaze Athletic Training website for Carrington Thompson. This is not a generic fitness-template build. Treat it as a high-credibility athletic development brand whose visual identity and narrative should be rooted in Carrington's real playing career, the NextPhaze concept of progression, and the primary conversion goal of booking a training session.
+
+SOURCE OF TRUTH
+
+Use the supplied document:
+“NextPhaze_Athletic_Training_Website_Content_Research_Brief.docx”
+
+Read the entire document before making design or implementation decisions. It contains:
+- verified business/contact information
+- current pricing and availability
+- Carrington Thompson's verified Northwood and Western Michigan statistics
+- his Western Michigan #15 identity
+- 2016 MAC Championship / Cotton Bowl context
+- West Michigan Ironmen history
+- 2018 MPIF championship and Offensive Rookie of the Year
+- ready-to-use page copy
+- booking requirements
+- SEO direction
+- media/source links
+- media-rights rules
+- client-input items that must remain visibly unresolved until confirmed
+
+Do not overwrite verified values with generalized sports copy. Do not invent awards, credentials, certifications, testimonials, athlete results, locations, service areas, ages, session lengths, reviews, league affiliations, or other facts.
+
+IMPORTANT ACCURACY RULE
+
+The earlier content referred to “AFL experience” and “IFL experience.” Do NOT publish those exact claims unless you find direct primary evidence that Carrington actually played in those specific leagues or the client supplies confirmation.
+
+Safe wording from the research brief is:
+“Professional indoor and arena football experience with the West Michigan Ironmen.”
+
+Verified highlights that may be used include:
+- Western Michigan University wide receiver #15
+- 2016 MAC Champion
+- Cotton Bowl team member
+- 50 receptions, 726 receiving yards and 8 touchdowns at Western Michigan
+- 2016 senior season: 42 receptions, 637 yards, 6 touchdowns
+- career game vs. Eastern Michigan: 8 receptions, 177 yards, 2 touchdowns
+- Northwood totals reported by WMU: 89 receptions, 1,210 yards, 10 touchdowns
+- combined collegiate totals, when explicitly labeled Northwood + Western Michigan: 139 receptions, 1,936 receiving yards, 18 touchdowns
+- West Michigan Ironmen experience
+- 2018 MPIF Champion
+- five receiving touchdowns in the 2018 MPIF championship game
+- 2018 MPIF Offensive Rookie of the Year
+
+DESIGN AGENT REQUIREMENT
+
+Use the agent and skills in:
+FlintstoneSEO/codex-frontend-design-agent
+
+Read that repository's AGENTS.md first and obey it. Do not skip its required sequence.
+
+Use the skills deliberately in this order where applicable:
+1. design-discovery
+2. industry-design-research
+3. art-direction-generator
+4. information-architecture
+5. page-content-planner
+6. frontend-ui-builder
+7. visual-design-review
+8. responsive-design-review
+9. accessibility-audit
+10. technical-seo-audit
+11. performance-review
+12. anti-template-review
+13. website-qa
+
+DO NOT START CODING IMMEDIATELY.
+
+First create the required planning artifacts from AGENTS.md:
+1. Completed project brief, with assumptions and [NEEDS CLIENT INPUT] items visible
+2. Three substantially different art directions
+3. Selected art direction with written rationale
+4. Approved/proposed information architecture
+5. Page specifications for the pages to be implemented
+
+If no human is available to choose among the three art directions during this run, evaluate them against the source brief, media quality, brand distinctiveness, accessibility, mobile behavior, and booking conversion. Select the strongest direction yourself, document why, and continue. Do not pretend the direction was client-approved. Label it as the agent-selected recommended direction.
+
+ART-DIRECTION STARTING TERRITORIES
+
+The research brief gives three starting territories. Develop all three into genuinely different concepts, not palette swaps:
+
+A. CHAMPIONSHIP EDITORIAL
+Sports-magazine/editorial energy. Large authentic photography, strong typography, stat graphics, editorial sequencing, minimal containers, confident asymmetry.
+
+B. TRAINING LAB
+Performance-development aesthetic. Technical linework, timing/measurement cues, dark precise surfaces, motion/footwork diagrams, disciplined grids, controlled metallic-gold accents.
+
+C. JOURNEY / NEXT PHASE
+Narrative composition built around progression: Lamar → Northwood → Western Michigan → Ironmen → NextPhaze. Milestones and transitions become the visual grammar of the site.
+
+Avoid default AI/landing-page patterns:
+- no automatic giant centered hero
+- no generic three-card section just because it is common
+- no glassmorphism
+- no meaningless gradient blobs
+- no excessive pill shapes
+- no repetitive rounded-card grids
+- no generic stock-gym aesthetic
+- no fake testimonials or fabricated star ratings
+
+The finished design should remain recognizable as NextPhaze even if the logo is temporarily hidden.
+
+VISUAL IDENTITY
+
+Use the existing NextPhaze logo and its black / metallic-gold / white identity as the starting palette.
+
+Design principles:
+- black/near-black for structural grounding, not a flat background on every section
+- gold used as a controlled performance accent
+- strong white/neutral editorial space where useful to create rhythm
+- authentic Carrington imagery should be the visual anchor
+- use #15, receiving-yard numbers, field markings, motion lines, route geometry, timing marks or progression cues subtly rather than as gimmicks
+- performance data should feel like premium sports editorial graphics
+- typography should feel competitive, mature, precise and credible
+- design for parents/guardians as buyers while still feeling aspirational to athletes
+
+PRIMARY CONVERSION
+
+The primary CTA is:
+BOOK A SESSION
+
+The booking path must be prominent and low friction, but do not turn every section into a CTA.
+
+RECOMMENDED INFORMATION ARCHITECTURE
+
+Use the source brief as the authority, but the recommended structure is:
+- /
+- /about
+- /training
+- /booking
+- /media (optional but recommended if the media implementation is strong)
+- /contact
+
+HOME PAGE CONTENT PRIORITY
+
+Recommended homepage sequence:
+1. Hero with athlete-development value proposition, authentic Carrington action image, and Book a Session
+2. Credibility strip: Western Michigan #15 / 2016 MAC Champion / Cotton Bowl / 2018 MPIF Champion / 2018 Offensive Rookie of the Year
+3. What We Develop
+4. Meet Coach Carrington
+5. Career numbers with explicit “Northwood + Western Michigan” labeling where combined
+6. Group and 1-on-1 programs/pricing
+7. “Your Current Level Is Not Your Final Level” development philosophy
+8. Career-performance feature: 8 REC / 177 YDS / 2 TD vs. Eastern Michigan
+9. Media / athletic journey
+10. Availability + booking
+11. Contact and policies
+
+Do not make the homepage feel like a football résumé. Carrington's playing history is proof supporting the training business, not the business itself.
+
+MEDIA REQUIREMENTS
+
+Inspect the source DOCX for embedded client-supplied images and extract/use them where technically appropriate.
+
+Also review the online media sources documented in the brief, including:
+- Western Michigan official player profile
+- WMU Eastern Michigan career-game recap
+- FOX 17 “Carrington Thompson chases football dream with Ironmen”
+- Local Sports Journal Ironmen championship coverage
+- Local Sports Journal Muskegon Mustangs video/photo coverage
+- Local Sports Journal Indianapolis video/photo coverage
+
+Create a file such as:
+research/media-provenance.md
+
+For every proposed third-party media item record:
+- source URL
+- publisher
+- photographer/creator if identified
+- media type
+- Carrington/context shown
+- proposed page/section
+- rights status: client-owned / official embed permitted / permission required / unknown
+- implementation decision
+
+RULES FOR ONLINE MEDIA
+
+1. Do not hotlink third-party sports/news images into production.
+2. Do not download and republish a photo merely because it is visible online.
+3. Prefer existing client-supplied Carrington images and original files supplied by Carrington.
+4. If an official publisher/video platform provides a lawful embed mechanism, an embedded video can be considered. Preserve attribution and do not remove publisher controls/branding.
+5. If video embedding cannot be verified as permitted, create a designed media card linking to the publisher page instead.
+6. For copyrighted sports photography without clear permission, build the layout with a labeled placeholder:
+   [NEEDS CLIENT MEDIA / USAGE PERMISSION]
+7. Do not use synthetic images of Carrington or synthetic “NextPhaze athletes” in a way that implies they are real clients.
+8. Do not allow missing media to block the overall build. Use high-quality placeholders with explicit provenance notes and make swapping assets straightforward.
+
+A strong target is to use the existing authentic action/community images now, then add online media as linked/embedded proof only when usage status is safe.
+
+BOOKING FUNCTIONALITY
+
+Build or integrate a booking experience supporting:
+- Parent/Guardian Name
+- Athlete Name
+- Athlete Age
+- Parent/Guardian contact information
+- Athlete sport / position / goals (recommended)
+- training type: Group or One-on-One
+- available date/time selection
+- online card payment or Pay in Cash
+- clear paid vs cash-due status
+- 12-hour cancellation policy acknowledgment
+
+Business-side requirements from the source brief:
+- calendar view of bookings
+- client/contact details
+- service and payment status
+- booking/cancellation/reschedule notifications
+- reminders
+- availability and blocked dates
+- double-booking prevention
+- appointment history
+- mobile management
+- Google Calendar sync if the selected architecture/platform supports it cleanly
+
+If the existing project does not yet contain a backend/payment/booking implementation, do not fabricate one. Build the UI/architecture cleanly and document the exact integration requirement and recommended next step.
+
+CURRENT PRICING
+
+Group: $30 per athlete
+One-on-One: $60 per athlete
+
+Do not add “starting at,” bundles, packages, discounts, subscriptions or session durations that have not been confirmed.
+
+CURRENT AVAILABILITY
+
+Monday–Friday: flexible/open availability
+Saturday: 9:00 AM–12:00 PM
+
+Training location is [NEEDS CLIENT INPUT]. Do not guess the city based only on phone numbers, prior teams, or biographical history.
+
+CONTENT
+
+Use the ready-to-use homepage, About, Training and booking copy in the source DOCX as the baseline.
+
+You may edit for web readability, hierarchy, repetition and responsive length, but do not change factual meaning or statistics.
+
+Key brand message to feature:
+“YOUR CURRENT LEVEL IS NOT YOUR FINAL LEVEL.”
+
+Keep the existing brand tagline:
+“Strength. Speed. Discipline. Next.”
+
+SEO
+
+Follow the technical-seo-audit skill.
+
+Requirements:
+- one descriptive H1 per standard page
+- unique page titles and meta descriptions
+- canonical strategy
+- sitemap/robots
+- semantic internal linking
+- structured data only from verified facts
+- no fabricated reviews, ratings or aggregateRating
+- no unverified service-area LocalBusiness properties
+
+Because the service city/location is not confirmed, use [NEEDS CLIENT INPUT] for location-dependent SEO rather than guessing.
+
+ACCESSIBILITY + PERFORMANCE
+
+Meet the design-agent defaults:
+- WCAG 2.2 AA
+- keyboard-accessible controls
+- visible focus
+- semantic HTML before ARIA
+- no horizontal overflow at 320px
+- minimum required text contrast
+- deliberate mobile composition
+- responsive review at 375, 390, 768, 1024 and 1440
+- LCP target <= 2.5s
+- INP target <= 200ms
+- CLS target <= 0.1
+
+Media performance:
+- responsive image sizes/srcset
+- optimized modern formats when possible
+- explicit image dimensions to avoid CLS
+- lazy-load below-fold imagery
+- poster image for video where appropriate
+- no autoplay with sound
+- defer third-party embeds until interaction or until needed if they materially hurt performance
+
+IMPLEMENTATION EXPECTATIONS
+
+1. Inspect the existing NextPhaze repository before replacing architecture or styling.
+2. Preserve anything technically valuable, but do not preserve weak placeholder design merely to minimize changes.
+3. Reuse existing project stack conventions where appropriate.
+4. Build reusable components rather than one-off repeated markup.
+5. Keep content/stat data structured so it can be maintained without editing component markup everywhere.
+6. Keep media replacement straightforward.
+7. Add alt text based on what the image actually communicates in context.
+8. Add clear empty/placeholder states for unresolved media and business facts.
+9. Do not expose research/debug notes in the production UI.
+10. Keep the source/research artifacts in a clearly separated docs/research directory if appropriate.
+
+REVIEW / QA GATE
+
+After implementation, run every applicable review skill:
+- visual-design-review
+- responsive-design-review
+- accessibility-audit
+- technical-seo-audit
+- performance-review
+- anti-template-review
+- website-qa
+
+For each issue use the AGENTS.md required output fields:
+- Severity
+- Element/file
+- Viewport/route/state
+- Observed problem
+- Evidence
+- Exact recommended change
+- Reason
+- Expected outcome
+- Verification method
+
+Fix blockers/high issues and meaningful medium issues before considering the site ready.
+
+DELIVERABLES
+
+At completion provide:
+1. The implemented site
+2. Project brief
+3. Three art-direction concepts
+4. Selected-direction rationale
+5. Information architecture
+6. Page specifications
+7. Design decision log
+8. Media provenance file
+9. List of all [NEEDS CLIENT INPUT] items still unresolved
+10. QA findings and fixes
+11. Clear instructions for replacing placeholder media with approved originals
+12. Summary of booking/payment integration status and anything still requiring credentials or platform setup
+
+FINAL STANDARD
+
+The site should make a parent understand within seconds:
+- what NextPhaze does
+- why Carrington is qualified to lead it
+- what training is available
+- what it costs
+- how to book
+
+At the same time, an athlete should feel that the brand is competitive, legitimate and built around progression.
+
+Do not produce a generic trainer website. Carrington's verified journey and the idea of moving into the “next phase” should shape the information hierarchy, visual grammar, interaction choices and content rhythm of the finished experience.

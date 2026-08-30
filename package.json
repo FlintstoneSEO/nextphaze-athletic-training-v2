@@ -1,0 +1,11 @@
+{
+  "name": "nextphaze-athletic-training",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/serve.mjs",
+    "check": "node scripts/check.mjs",
+    "sitemap": "node scripts/generate-sitemap.mjs"
+  }
+}
