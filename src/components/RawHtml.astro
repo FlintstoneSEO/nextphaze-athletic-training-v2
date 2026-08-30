@@ -2,6 +2,4 @@
 const { content } = Astro.props;
 ---
 
-<section data-editable="component" data-component="visual_section">
-  <div data-editable="text" data-prop="content" data-type="block" set:html={content}></div>
-</section>
+<div data-editable="text" data-prop="content" data-type="block" set:html={content}></div>

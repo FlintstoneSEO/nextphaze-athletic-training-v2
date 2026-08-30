@@ -1,13 +1,14 @@
 ---
 import siteData from "../data/site.json";
-const { brand, navigation, contact } = Astro.props.brand ? Astro.props : siteData;
+const site = Astro.props.brand && Array.isArray(Astro.props.navigation) && Astro.props.contact ? Astro.props : siteData;
+const { brand, navigation, contact } = site;
 ---
 
 <footer class="site-footer">
   <div class="container">
     <div class="footer-grid">
       <div>
-        <img class="footer-logo" data-editable="image" data-prop="@data[site].brand.logo" src={brand.logo} width="628" height="627" alt={brand.logo_alt} />
+        <img class="footer-logo" data-editable="image" data-prop-src="@data[site].brand.logo" data-prop-alt="@data[site].brand.logo_alt" src={brand.logo} width="628" height="627" alt={brand.logo_alt} />
         <p class="footer-title" data-editable="text" data-prop="@data[site].brand.tagline">{brand.tagline}</p>
       </div>
       <div>
