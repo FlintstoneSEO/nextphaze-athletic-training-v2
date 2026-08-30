@@ -44,7 +44,7 @@ button { cursor: pointer; }
 .eyebrow { margin: 0 0 .8rem; color: var(--gold); font-size: .75rem; font-weight: 900; letter-spacing: .18em; text-transform: uppercase; }
 .dark .eyebrow { color: var(--gold-light); }
 h1, h2, h3 { margin: 0; font-family: var(--display); font-weight: 900; letter-spacing: -.025em; line-height: .94; text-transform: uppercase; }
-h1, h2, h3 { overflow-wrap: break-word; }
+h1, h2, h3 { overflow-wrap: normal; word-break: normal; hyphens: none; }
 h1 { font-size: clamp(3.1rem, 8.3vw, 7.6rem); }
 h2 { font-size: clamp(2.35rem, 5.7vw, 5rem); }
 h3 { font-size: clamp(1.35rem, 2.2vw, 2rem); }
@@ -63,9 +63,9 @@ p { max-width: 67ch; }
 .text-link { font-weight: 850; text-decoration-color: var(--gold); }
 
 .hero { background: var(--ink); color: white; overflow: hidden; }
-.hero-grid { width: min(100%, 96rem); margin-inline: auto; display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); min-height: min(47rem, calc(100vh - 5rem)); }
-.hero-copy { min-width: 0; align-self: center; padding: clamp(3rem, 6vw, 7rem) clamp(1rem, 5vw, 5.5rem); position: relative; z-index: 2; }
-.hero-copy h1 { font-size: clamp(3.75rem, 5.8vw, 6.4rem); }
+.hero-grid { width: min(100%, 96rem); margin-inline: auto; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); min-height: min(45rem, calc(100svh - 5rem)); }
+.hero-copy { min-width: 0; align-self: center; padding: clamp(3rem, 5vw, 5.5rem) clamp(2.5rem, 4vw, 4rem); position: relative; z-index: 2; }
+.hero-copy h1 { max-width: 100%; overflow-wrap: normal; word-break: normal; hyphens: none; font-size: clamp(3.5rem, 5vw, 5.4rem); }
 .hero-copy::after { content: "15"; position: absolute; right: -1.5rem; bottom: -3.5rem; color: rgba(255,255,255,.035); font-family: var(--display); font-size: 19rem; line-height: 1; z-index: -1; }
 .hero-media { position: relative; min-height: 34rem; background: #202024; }
 .hero-media::before { content: ""; position: absolute; inset: 0 auto 0 0; z-index: 1; width: 18%; background: linear-gradient(90deg, var(--ink), transparent); }
@@ -86,7 +86,8 @@ p { max-width: 67ch; }
 .phase-list p { margin: 0; }
 
 .coach-feature { display: grid; grid-template-columns: minmax(20rem, 1fr) minmax(22rem, 1fr); gap: clamp(2.5rem, 5vw, 5rem); align-items: center; }
-.portrait-frame { position: relative; }
+.coach-feature h2 { font-size: clamp(2.35rem, 4.6vw, 4.25rem); }
+.portrait-frame { position: relative; margin: 0; }
 .portrait-frame::before { content: ""; position: absolute; inset: 1.2rem -1.2rem -1.2rem 1.2rem; border: 2px solid var(--gold); }
 .portrait-frame img { position: relative; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: center top; }
 
@@ -183,9 +184,9 @@ input:invalid:not(:placeholder-shown), select:invalid { border-color: var(--dang
 
 @media (max-width: 68rem) {
   .hero { position: relative; }
-  .hero-grid { position: relative; display: grid; grid-template-columns: 1fr; min-height: clamp(38rem, calc(100svh - 5rem), 48rem); }
-  .hero-copy { width: min(calc(100% - 2rem), var(--max)); margin-inline: auto; padding: clamp(4rem, 9vw, 6rem) 0; display: flex; flex-direction: column; justify-content: center; }
-  .hero-copy h1 { max-width: 10ch; font-size: clamp(3.75rem, 9.3vw, 6.4rem); }
+  .hero-grid { position: relative; display: grid; grid-template-columns: 1fr; min-height: clamp(38rem, calc(100svh - 5rem), 46rem); }
+  .hero-copy { width: min(100%, var(--max)); margin-inline: auto; padding: clamp(4rem, 9vw, 6rem) clamp(2rem, 6vw, 5rem); display: flex; flex-direction: column; justify-content: center; }
+  .hero-copy h1 { max-width: 11.5ch; font-size: clamp(3.5rem, 7.5vw, 5rem); }
   .hero-copy .lead { max-width: 43rem; color: #f0eee9; }
   .hero-copy::after { right: 0; }
   .hero-media { position: absolute; inset: 0; min-height: 0; }
@@ -207,17 +208,19 @@ input:invalid:not(:placeholder-shown), select:invalid { border-color: var(--dang
   .js .primary-nav[hidden] { display: none; }
   .primary-nav a { min-height: 3rem; display: flex; align-items: center; padding-inline: .5rem; }
   .primary-nav .nav-cta { justify-content: center; margin-top: .5rem; }
-  .hero-grid { min-height: clamp(40rem, calc(100svh - 4.5rem), 47rem); }
-  .hero-copy { width: min(calc(100% - 1.35rem), var(--max)); padding-block: 3.5rem; }
-  .hero-copy h1 { font-size: clamp(3.2rem, 15.5vw, 5.2rem); }
+  .hero-grid { min-height: clamp(39rem, calc(100svh - 4.5rem), 45rem); }
+  .hero-copy { width: 100%; padding: 3.5rem clamp(1.25rem, 5vw, 2.5rem); }
+  .hero-copy h1 { max-width: 11.5ch; font-size: clamp(2.25rem, 11.5vw, 4rem); }
   .hero-media::before { background: linear-gradient(90deg, rgba(11,11,12,.93) 0%, rgba(11,11,12,.78) 72%, rgba(11,11,12,.58) 100%), linear-gradient(0deg, rgba(11,11,12,.7), transparent 55%); }
   .hero-media img { object-position: 60% center; }
   .section-head, .page-hero-grid, .booking-layout { grid-template-columns: 1fr; }
   .page-hero-number { justify-self: start; font-size: 7rem; }
+  .page-hero h1 { font-size: clamp(2.5rem, 11vw, 4.5rem); }
   .phase-list li { grid-template-columns: 3rem 1fr; }
   .phase-list li p { grid-column: 2; }
   .coach-feature { grid-template-columns: 1fr; }
-  .portrait-frame { width: min(100%, 36rem); margin-inline: auto; }
+  .portrait-frame { width: min(calc(100% - .75rem), 36rem); margin-left: 0; margin-right: .75rem; }
+  .portrait-frame::before { inset: .75rem -.75rem -.75rem .75rem; }
   .stats { grid-template-columns: 1fr; }
   .stat { border-left: 0; border-top: 1px solid #464649; }
   .stat:first-child { border-top: 0; }
@@ -233,6 +236,9 @@ input:invalid:not(:placeholder-shown), select:invalid { border-color: var(--dang
 
 @media (max-width: 35rem) {
   .container { width: min(calc(100% - 1.35rem), var(--max)); }
+  h2, .coach-feature h2 { font-size: clamp(2rem, 8.5vw, 2.35rem); }
+  .page-hero h1 { font-size: clamp(2.15rem, 10vw, 3rem); }
+  .hero-copy h1 { max-width: 100%; font-size: clamp(2.05rem, 10.5vw, 3rem); }
   .ledger-list { grid-template-columns: 1fr 1fr; }
   .ledger-list li { border-top: 1px solid #3c3c3f; }
   .ledger-list li:nth-child(odd) { border-left: 0; }
