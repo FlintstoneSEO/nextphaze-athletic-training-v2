@@ -1,0 +1,27 @@
+---
+import siteData from "../data/site.json";
+const { brand, navigation, contact } = Astro.props.brand ? Astro.props : siteData;
+---
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <img class="footer-logo" data-editable="image" data-prop="@data[site].brand.logo" src={brand.logo} width="628" height="627" alt={brand.logo_alt} />
+        <p class="footer-title" data-editable="text" data-prop="@data[site].brand.tagline">{brand.tagline}</p>
+      </div>
+      <div>
+        <p class="eyebrow">Navigate</p>
+        <ul class="footer-nav" data-editable="array" data-prop="@data[site].navigation">
+          {navigation.map((item) => <li data-editable="array-item"><a href={item.url}><span data-editable="text" data-prop="label">{item.label}</span></a></li>)}
+        </ul>
+      </div>
+      <div>
+        <p class="eyebrow">Contact</p>
+        <p><a data-editable="text" data-prop="@data[site].contact.phone" href={contact.phone_url}>{contact.phone}</a><br /><a data-editable="text" data-prop="@data[site].contact.email" href={contact.email_url}>{contact.email}</a></p>
+        <p data-editable="text" data-prop="@data[site].contact.cancellation_note">{contact.cancellation_note}</p>
+      </div>
+    </div>
+    <div class="footer-meta"><span>© <span data-year></span> <span data-editable="text" data-prop="@data[site].brand.name">{brand.name}</span></span><span data-editable="text" data-prop="@data[site].contact.location_note">{contact.location_note}</span></div>
+  </div>
+</footer>

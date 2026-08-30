@@ -1,6 +1,8 @@
 ---
 import { getCollection } from "astro:content";
 import BlockRenderer from "../components/BlockRenderer.astro";
+import SiteHeader from "../components/SiteHeader.astro";
+import SiteFooter from "../components/SiteFooter.astro";
 
 export async function getStaticPaths() {
   const pages = await getCollection("pages");
@@ -23,9 +25,18 @@ const { page } = Astro.props;
     <link rel="stylesheet" href="/assets/css/site.css?v=20260830-6" />
   </head>
   <body>
-    <div data-editable="array" data-prop="content_blocks" data-component-key="_type">
-      {page.data.content_blocks.map((block) => <BlockRenderer block={block} />)}
-    </div>
+    <editable-component data-component="site_header" data-prop="@data[site]">
+      <SiteHeader />
+    </editable-component>
+    <main id="main-content">
+      <div data-editable="array" data-prop="content_blocks" data-component-key="_type">
+        {page.data.content_blocks.map((block) => <BlockRenderer block={block} />)}
+      </div>
+    </main>
+    <editable-component data-component="site_footer" data-prop="@data[site]">
+      <SiteFooter />
+    </editable-component>
+    <script type="module" src="/assets/js/site.js"></script>
     <script>
       if (window.inEditorMode) {
         import("../cloudcannon/registerComponents").catch((error) => {

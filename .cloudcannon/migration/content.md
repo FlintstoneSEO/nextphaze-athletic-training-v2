@@ -4,7 +4,8 @@
 
 - Created `src/content/pages/` with `index.md`, `about.md`, `training.md`, `booking.md`, `contact.md`, and `media.md`.
 - Each entry has consistent `_schema`, `title`, `description`, and `content_blocks` fields matching `src/content.config.ts` and the CloudCannon schema template.
-- Preserved all existing markup, verified factual copy, images, links, navigation, footer content, and booking-form `data-*` hooks inside an editable `raw_html` block. No facts were invented or changed.
+- Split each page into its top-level visual sections. Named blocks preserve the existing markup, verified factual copy, images, links, and booking-form `data-*` hooks; no facts were invented or changed.
+- Moved shared brand, navigation, contact, and footer values into `src/data/site.json`.
 - The original static HTML files are retained as a recoverable source reference; Astro now builds the content-collection entries instead.
 
 ## Review

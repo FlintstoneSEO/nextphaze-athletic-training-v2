@@ -8,6 +8,38 @@ collection_groups:
     collections:
       - pages
 
+data_config:
+  site:
+    path: src/data/site.json
+
+file_config:
+  - glob: src/data/site.json
+    _inputs:
+      brand.logo:
+        type: image
+      brand.logo_alt:
+        type: text
+      brand.name:
+        type: text
+      brand.tagline:
+        type: text
+      navigation:
+        type: array
+        options:
+          structures: _structures.navigation_items
+      contact.phone:
+        type: text
+      contact.phone_url:
+        type: text
+      contact.email:
+        type: text
+      contact.email_url:
+        type: text
+      contact.cancellation_note:
+        type: textarea
+      contact.location_note:
+        type: textarea
+
 collections_config:
   pages:
     path: src/content/pages
@@ -38,23 +70,23 @@ _editables:
 _structures:
   content_blocks:
     values:
-      - label: HTML section
-        icon: code
+      - label: Visual section
+        icon: article
         picker_preview:
           text:
-            - HTML section
+            - Visual section
           icon:
-            - code
+            - article
         preview:
           text:
             - key: label
-            - HTML section
+            - Visual section
           icon:
-            - code
+            - article
         value:
-          _type: raw_html
+          _type: visual_section
           label: New section
-          content: ""
+          content: "<section class=\"section\"><div class=\"container\"><h2>New section</h2><p>Add content here.</p></div></section>"
         _inputs:
           label:
             type: text
@@ -62,6 +94,32 @@ _structures:
             type: html
             options:
               allow_custom_markup: true
+  navigation_items:
+    values:
+      - label: Navigation link
+        icon: link
+        picker_preview:
+          text:
+            - Navigation link
+          icon:
+            - link
+        preview:
+          text:
+            - key: label
+            - Navigation link
+          icon:
+            - link
+        value:
+          label: New link
+          url: "/"
+          primary: false
+        _inputs:
+          label:
+            type: text
+          url:
+            type: text
+          primary:
+            type: switch
 
 _inputs:
   _schema:

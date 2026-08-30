@@ -1,0 +1,21 @@
+---
+import siteData from "../data/site.json";
+const { brand, navigation } = Astro.props.brand ? Astro.props : siteData;
+---
+
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<header class="site-header">
+  <div class="nav-shell">
+    <a class="brand" href="/" aria-label={`${brand.name} home`}>
+      <img data-editable="image" data-prop="@data[site].brand.logo" src={brand.logo} width="628" height="627" alt={brand.logo_alt} />
+    </a>
+    <button class="menu-button" type="button" aria-expanded="false" aria-controls="primary-navigation" data-menu-button>Menu</button>
+    <nav class="primary-nav" id="primary-navigation" aria-label="Primary" data-menu data-editable="array" data-prop="@data[site].navigation">
+      {navigation.map((item) => (
+        <a data-editable="array-item" class:list={{ "nav-cta": item.primary }} href={item.url}>
+          <span data-editable="text" data-prop="label">{item.label}</span>
+        </a>
+      ))}
+    </nav>
+  </div>
+</header>

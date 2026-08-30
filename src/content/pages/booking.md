@@ -3,13 +3,14 @@ _schema: page_builder
 title: "Request a Training Session | NextPhaze Athletic Training"
 description: "Choose group or one-on-one NextPhaze training, review current availability and prepare a session request for your athlete."
 content_blocks:
-  - _type: raw_html
-    label: Page content
+  - _type: visual_section
+    label: "Request your training session."
     content: |-
-      <a class="skip-link" href="#main-content">Skip to main content</a><header class="site-header"><div class="nav-shell"><a class="brand" href="/" aria-label="NextPhaze Athletic Training home"><img src="/assets/images/nextphaze-logo.png" width="628" height="627" alt=""></a><button class="menu-button" type="button" aria-expanded="false" aria-controls="primary-navigation" data-menu-button>Menu</button><nav class="primary-nav" id="primary-navigation" aria-label="Primary" data-menu><a href="/training/">Training</a><a href="/about/">About</a><a href="/media/">Media</a><a href="/contact/">Contact</a><a class="nav-cta" href="/booking/" aria-current="page">Book a Session</a></nav></div></header>
-      <main id="main-content">
-        <header class="page-hero"><div class="container page-hero-grid"><div><p class="eyebrow">Booking request</p><h1>Request your training session.</h1><p class="lead">Choose a training format, share the athlete’s goals and request a preferred time. Carrington confirms the final time and location directly.</p></div><div class="page-hero-number" aria-hidden="true">→</div></div></header>
-        <section class="section paper-bright" aria-labelledby="request-title"><div class="container booking-layout"><div><p class="eyebrow">Request details / 01</p><h2 id="request-title">Prepare your request.</h2><p>This form validates the information in your browser and prepares an email. It does not reserve a calendar slot, transmit card details or confirm payment.</p>
+      <header class="page-hero"><div class="container page-hero-grid"><div><p class="eyebrow">Booking request</p><h1>Request your training session.</h1><p class="lead">Choose a training format, share the athlete’s goals and request a preferred time. Carrington confirms the final time and location directly.</p></div><div class="page-hero-number" aria-hidden="true">→</div></div></header>
+  - _type: visual_section
+    label: "Prepare your request."
+    content: |-
+      <section class="section paper-bright" aria-labelledby="request-title"><div class="container booking-layout"><div><p class="eyebrow">Request details / 01</p><h2 id="request-title">Prepare your request.</h2><p>This form validates the information in your browser and prepares an email. It does not reserve a calendar slot, transmit card details or confirm payment.</p>
           <form data-booking-form>
             <fieldset><legend>1. Choose training</legend><div class="choice-grid">
               <label class="choice"><input type="radio" name="training-type" value="Group training — $30 per athlete" required><span><strong>Group training</strong><small>$30 per athlete · competitive shared environment</small></span></label>
@@ -37,6 +38,4 @@ content_blocks:
           </form>
           <section class="handoff" tabindex="-1" data-booking-handoff hidden aria-labelledby="handoff-title"><h3 id="handoff-title">Your request is ready.</h3><p>Open your email app to review and send it. A session is confirmed only after Carrington replies with the time and location.</p><div class="button-row"><a class="button button-gold" href="mailto:carrington.j.Thompson15@gmail.com" data-email-request>Open email request</a><a class="button button-ghost" href="tel:+18108698554">Call 810-869-8554</a></div></section>
         </div><aside class="booking-aside" aria-labelledby="before-title"><p class="eyebrow">Before you request</p><h3 id="before-title">What is confirmed now</h3><ul><li>Group: $30 per athlete</li><li>One-on-one: $60 per athlete</li><li>Monday–Friday: flexible/open</li><li>Saturday: 9:00 AM–12:00 PM</li><li>12-hour cancellation window</li></ul><p><strong>Confirmed after your request:</strong> exact time and training location.</p><p>Live slot selection, online card payment, reminders and Google Calendar sync require a scheduling platform and business credentials.</p><a class="text-link" href="/contact/">Prefer to contact Carrington directly? →</a></aside></div></section>
-      </main>
-      <footer class="site-footer"><div class="container"><div class="footer-grid"><div><img class="footer-logo" src="/assets/images/nextphaze-logo.png" width="628" height="627" alt=""><p class="footer-title">Strength. Speed. Discipline. Next.</p></div><div><p class="eyebrow">Navigate</p><ul class="footer-nav"><li><a href="/training/">Training</a></li><li><a href="/about/">About</a></li><li><a href="/media/">Media</a></li><li><a href="/booking/">Booking</a></li><li><a href="/contact/">Contact</a></li></ul></div><div><p class="eyebrow">Contact</p><p><a href="tel:+18108698554">810-869-8554</a><br><a href="mailto:carrington.j.Thompson15@gmail.com">carrington.j.Thompson15@gmail.com</a></p><p>Cancel up to 12 hours before a scheduled session.</p></div></div><div class="footer-meta"><span>© <span data-year></span> NextPhaze Athletic Training</span><span>Training location provided with confirmed booking.</span></div></div></footer><script type="module" src="/assets/js/site.js"></script>
 ---

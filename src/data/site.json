@@ -1,0 +1,23 @@
+{
+  "brand": {
+    "name": "NextPhaze Athletic Training",
+    "logo": "/assets/images/nextphaze-logo.png",
+    "logo_alt": "NextPhaze Athletic Training",
+    "tagline": "Strength. Speed. Discipline. Next."
+  },
+  "navigation": [
+    { "label": "Training", "url": "/training/" },
+    { "label": "About", "url": "/about/" },
+    { "label": "Media", "url": "/media/" },
+    { "label": "Contact", "url": "/contact/" },
+    { "label": "Book a Session", "url": "/booking/", "primary": true }
+  ],
+  "contact": {
+    "phone": "810-869-8554",
+    "phone_url": "tel:+18108698554",
+    "email": "carrington.j.Thompson15@gmail.com",
+    "email_url": "mailto:carrington.j.Thompson15@gmail.com",
+    "cancellation_note": "Cancel up to 12 hours before a scheduled session.",
+    "location_note": "Training location provided with confirmed booking."
+  }
+}

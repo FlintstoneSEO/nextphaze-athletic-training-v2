@@ -3,7 +3,8 @@
 ## Decisions
 
 - Added the `pages` collection at `src/content/pages` with `url: "/[slug]/"`. The filename-based `[slug]` placeholder produces `/` for `index.md` and preserves trailing-slash routes for every other page.
-- Added one `page_builder` schema and a `content_blocks` structure. The `raw_html` block keeps the existing, verified document markup intact while exposing each page document as a structured, editable block that can be reordered, duplicated, or replaced.
+- Added one `page_builder` schema and a `content_blocks` structure. `visual_section` is a normal rich-text section, so editors receive named, reorderable page sections instead of a page-wide HTML/code block.
+- Added `src/data/site.json` as a `data_config` source and a root-level `file_config` entry for shared navigation, brand, logo, contact, and footer settings.
 - Configured `public/assets/images` as the upload location because all existing site images are plain static assets served from `public`.
 - Added first-site CloudCannon build settings: npm install, `npm run build`, output `dist`.
 
