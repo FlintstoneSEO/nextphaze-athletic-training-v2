@@ -1,3 +1,6 @@
-// This migration currently uses source-editable HTML pages. Register page-builder
-// components here when the content is split into reusable Astro components.
-export {};
+import { registerAstroComponent } from "@cloudcannon/editable-regions/astro";
+import { componentMap } from "./componentMap";
+
+for (const [name, component] of Object.entries(componentMap)) {
+  registerAstroComponent(name, component);
+}

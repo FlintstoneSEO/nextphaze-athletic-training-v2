@@ -1,31 +1,16 @@
 ---
-export function getStaticPaths() {
-  return [
-    { params: { slug: undefined } },
-    { params: { slug: "about" } },
-    { params: { slug: "training" } },
-    { params: { slug: "booking" } },
-    { params: { slug: "contact" } },
-    { params: { slug: "media" } },
-  ];
+import { getCollection } from "astro:content";
+import BlockRenderer from "../components/BlockRenderer.astro";
+
+export async function getStaticPaths() {
+  const pages = await getCollection("pages");
+  return pages.map((page) => ({
+    params: { slug: page.id === "index" ? undefined : page.id },
+    props: { page },
+  }));
 }
 
-const pages = import.meta.glob(
-  "../../{index,about/index,training/index,booking/index,contact/index,media/index}.html",
-  { eager: true, query: "?raw", import: "default" },
-);
-
-const slug = Astro.params.slug ?? "";
-const sourcePath = slug ? `../../${slug}/index.html` : "../../index.html";
-const source = pages[sourcePath] as string | undefined;
-
-if (!source) {
-  return Astro.redirect("/404.html");
-}
-
-const head = source.match(/<head[^>]*>([\s\S]*?)<\/head>/i)?.[1] ?? "";
-const body = source.match(/<body[^>]*>([\s\S]*?)<\/body>/i)?.[1] ?? "";
-const title = head.match(/<title>([\s\S]*?)<\/title>/i)?.[1] ?? "NextPhaze Athletic Training";
+const { page } = Astro.props;
 ---
 
 <!doctype html>
@@ -33,10 +18,20 @@ const title = head.match(/<title>([\s\S]*?)<\/title>/i)?.[1] ?? "NextPhaze Athle
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title set:html={title} />
-    <Fragment set:html={head.replace(/<title>[\s\S]*?<\/title>/i, "").replace(/<meta charset=[^>]*>/i, "").replace(/<meta name="viewport"[^>]*>/i, "")} />
+    <title set:html={page.data.title} />
+    <meta name="description" content={page.data.description} />
+    <link rel="stylesheet" href="/assets/css/site.css?v=20260830-6" />
   </head>
-  <body data-editable="source" data-path={sourcePath.replace("../../", "")} data-key={`page-${slug || "home"}`}>
-    <Fragment set:html={body} />
+  <body>
+    <div data-editable="array" data-prop="content_blocks" data-component-key="_type">
+      {page.data.content_blocks.map((block) => <BlockRenderer block={block} />)}
+    </div>
+    <script>
+      if (window.inEditorMode) {
+        import("../cloudcannon/registerComponents").catch((error) => {
+          console.warn("Failed to load CloudCannon component registration:", error);
+        });
+      }
+    </script>
   </body>
 </html>

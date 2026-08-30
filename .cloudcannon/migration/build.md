@@ -1,8 +1,9 @@
 # Build and test
 
-- `npm run build`: passed after the Astro migration.
-- `npm run check`: passed; validates the six indexable routes.
-- Output routes verified: `/`, `/about/`, `/training/`, `/booking/`, `/contact/`, `/media/`, and `/404.html`.
-- `data-editable="source"` is present on each migrated page body in generated HTML.
+- Ran `npm.cmd run build` successfully after the migration.
+- Astro generated all six content routes plus `/404.html` as static output.
+- Build output uses the `pages` content collection and contains CloudCannon page-builder editable attributes.
 
-CloudCannon-side verification remains required: create/import the site, confirm the configured build succeeds, open each page in the Visual Editor, edit a representative source region, and confirm saved changes land in the expected HTML file.
+## CloudCannon verification required
+
+In the hosted CloudCannon site, open representative pages and verify that the page-content block can be opened, edited, saved, and reloaded; that its block controls can add/remove/reorder; that images can be selected in the HTML editor; and that the booking form still prepares the email request after an edit. Confirm saved changes land in the intended `src/content/pages/*.md` file.

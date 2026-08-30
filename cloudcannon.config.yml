@@ -3,6 +3,28 @@ paths:
   static: public
   uploads: public/assets/images
 
+collection_groups:
+  - heading: Content
+    collections:
+      - pages
+
+collections_config:
+  pages:
+    path: src/content/pages
+    url: "/[slug]/"
+    icon: wysiwyg
+    _enabled_editors:
+      - visual
+      - data
+    schemas:
+      page_builder:
+        path: .cloudcannon/schemas/page-builder.md
+        name: Page Builder
+        new_preview_url: /training/
+    add_options:
+      - name: Page Builder
+        schema: page_builder
+
 _editables:
   content:
     bold: true
@@ -12,3 +34,43 @@ _editables:
     numberedlist: true
     blockquote: true
     format: "p h2 h3 h4"
+
+_structures:
+  content_blocks:
+    values:
+      - label: HTML section
+        icon: code
+        picker_preview:
+          text:
+            - HTML section
+          icon:
+            - code
+        preview:
+          text:
+            - key: label
+            - HTML section
+          icon:
+            - code
+        value:
+          _type: raw_html
+          label: New section
+          content: ""
+        _inputs:
+          label:
+            type: text
+          content:
+            type: html
+            options:
+              allow_custom_markup: true
+
+_inputs:
+  _schema:
+    hidden: true
+  title:
+    type: text
+  description:
+    type: textarea
+  content_blocks:
+    type: array
+    options:
+      structures: _structures.content_blocks

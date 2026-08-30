@@ -1,0 +1,5 @@
+---
+const { content } = Astro.props;
+---
+
+<div data-editable="text" data-prop="content" data-type="block" set:html={content}></div>
