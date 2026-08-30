@@ -1,11 +1,13 @@
 ---
 _schema: page_builder
-title: "NextPhaze Athletic Training | Speed, Agility & WR Training"
-description: "Build speed, footwork, agility, confidence and position-specific skill with NextPhaze Athletic Training, led by former Western Michigan WR Carrington Thompson."
+title: NextPhaze Athletic Training | Speed, Agility & WR Training
+description: Build speed, footwork, agility, confidence and position-specific
+  skill with NextPhaze Athletic Training, led by former Western Michigan WR
+  Carrington Thompson.
 content_blocks:
   - _type: visual_section
-    label: "Athlete development for what comes next."
-    content: |-
+    label: Athlete development for what comes next.
+    content: >-
       <section class="hero" aria-labelledby="home-title">
             <div class="hero-grid">
               <div class="hero-copy">
@@ -20,29 +22,33 @@ content_blocks:
             </div>
           </section>
   - _type: visual_section
-    label: "Section 2"
-    content: |-
+    label: Section 2
+    content: >-
       <aside class="ledger" aria-label="Career highlights">
             <ul class="ledger-list"><li>Western Michigan #15</li><li>2016 MAC Champion</li><li>Cotton Bowl Team</li><li>2018 MPIF Champion</li><li>2018 Offensive Rookie of the Year</li></ul>
           </aside>
   - _type: visual_section
-    label: "Build the athlete.Not just the drill."
-    content: |-
-      <section class="section paper-bright" aria-labelledby="develop-title">
-            <div class="container">
-              <div class="section-head"><div><p class="eyebrow">The work / 01</p><h2 id="develop-title">Build the athlete.<br>Not just the drill.</h2></div><p class="lead">Training is shaped around the athlete in front of us—emphasizing movement, technique, discipline and confidence that transfer to competition.</p></div>
-              <ol class="phase-list">
-                <li><span class="phase-number">01</span><h3>Speed &amp; acceleration</h3><p>Develop efficient movement and usable speed for the demands of sport.</p></li>
-                <li><span class="phase-number">02</span><h3>Footwork &amp; direction</h3><p>Train balance, body control, quickness and sharper changes of direction.</p></li>
-                <li><span class="phase-number">03</span><h3>Position-specific skill</h3><p>Connect mechanics and repetition to football, basketball, soccer, baseball, track and other sports.</p></li>
-                <li><span class="phase-number">04</span><h3>Conditioning &amp; discipline</h3><p>Build the work capacity and focus to maintain quality as intensity rises.</p></li>
-              </ol>
-              <p><a class="text-link" href="/training/">Explore the training approach →</a></p>
-            </div>
-          </section>
+    label: Build the athlete.Not just the drill.
+    content: <section><div><div><div><p class="eyebrow">The work / 01</p><h2>Build
+      the athlete.<br />Not just the drill.</h2></div><p class="lead">Training
+      is shaped around the athlete in front of us—emphasizing movement,
+      technique, discipline and confidence that transfer to
+      competition.</p></div><ol class="phase-list"><li><p><span
+      class="phase-number">01</span> </p><h3>Speed &amp;
+      acceleration</h3><p>Develop efficient movement and usable speed for the
+      demands of sport.</p></li><li><p><span class="phase-number">02</span>
+      </p><h3>Footwork &amp; direction</h3><p>Train balance, body control,
+      quickness and sharper changes of direction.</p></li><li><p><span
+      class="phase-number">03</span> </p><h3>Position-specific
+      skill</h3><p>Connect mechanics and repetition to football, basketball,
+      soccer, baseball, track and other sports.</p></li><li><p><span
+      class="phase-number">04</span> </p><h3>Conditioning &amp;
+      discipline</h3><p>Build the work capacity and focus to maintain quality as
+      intensity rises.</p></li></ol><p><a class="text-link"
+      href="/training/">Explore the training approach →</a></p></div></section>
   - _type: visual_section
-    label: "Experience earned through every phase."
-    content: |-
+    label: Experience earned through every phase.
+    content: >-
       <section class="section" aria-labelledby="coach-title">
             <div class="container coach-feature">
               <figure class="portrait-frame"><img src="/assets/images/carrington-portrait-550.jpg" srcset="/assets/images/carrington-portrait-360.jpg 360w, /assets/images/carrington-portrait-550.jpg 550w" sizes="(max-width: 800px) calc(100vw - 2rem), 50vw" width="550" height="671" alt="Carrington Thompson smiling at an indoor football event" loading="lazy"></figure>
@@ -50,25 +56,43 @@ content_blocks:
             </div>
           </section>
   - _type: visual_section
-    label: "Collegiate career totals"
-    content: |-
-      <section class="section stat-field" aria-labelledby="numbers-title">
-            <div class="container stat-scoreboard">
-              <header class="stat-heading">
-                <div><p class="eyebrow">The record / 03</p><h2 id="numbers-title">Collegiate<br>career totals</h2></div>
-                <p class="stat-context"><span>Combined record</span>Northwood University<br>+ Western Michigan University</p>
-              </header>
-              <dl class="stats">
-                <div class="stat"><dt class="stat-label">Receptions</dt><dd class="stat-value">139</dd></div>
-                <div class="stat"><dt class="stat-label">Receiving yards</dt><dd class="stat-value">1,936</dd></div>
-                <div class="stat stat-wide"><dt class="stat-label">Receiving touchdowns</dt><dd class="stat-value">18</dd></div>
-              </dl>
-              <p class="stat-note">Northwood totals are reported by Western Michigan Athletics. Combined figures are never represented as Western Michigan-only statistics.</p>
-            </div>
-          </section>
+    label: Collegiate career totals
+    content: >-
+      <section><div><header><div><p class="eyebrow">The record /
+      03</p><h2>Collegiate<br />career totals</h2></div><p
+      class="stat-context"><span>Combined record </span>Northwood University<br
+      />+ Western Michigan University</p></header><p></p><p><dl class="stats">
+
+      <div class="stat">
+
+      <dt class="stat-label">Receptions</dt>
+
+      <dd class="stat-value">139</dd>
+
+      </div>
+
+      <div class="stat">
+
+      <dt class="stat-label">Receiving yards</dt>
+
+      <dd class="stat-value">1,936</dd>
+
+      </div>
+
+      <div class="stat stat-wide">
+
+      <dt class="stat-label">Receiving touchdowns</dt>
+
+      <dd class="stat-value">18</dd>
+
+      </div>
+
+      </dl> </p><p></p><p class="stat-note">Northwood totals are reported by
+      Western Michigan Athletics. Combined figures are never represented as
+      Western Michigan-only statistics.</p></div></section>
   - _type: visual_section
-    label: "Two ways to train."
-    content: |-
+    label: Two ways to train.
+    content: >-
       <section class="section paper-bright" aria-labelledby="program-title">
             <div class="container"><div class="section-head"><div><p class="eyebrow">Choose your work / 04</p><h2 id="program-title">Two ways to train.</h2></div><p>See the price before sharing personal information. Session length, group capacity, athlete age range and exact location are confirmed directly with Carrington.</p></div>
               <div class="programs">
@@ -78,21 +102,21 @@ content_blocks:
             </div>
           </section>
   - _type: visual_section
-    label: "Your current level is not your final level."
-    content: |-
+    label: Your current level is not your final level.
+    content: >-
       <section class="section manifesto" aria-labelledby="philosophy-title">
             <div class="container"><p class="eyebrow">The mindset / 05</p><h2 id="philosophy-title">Your current level is not your final level.</h2><p class="lead lede-narrow">Development is a process: identify the next area to improve, train it with purpose and keep moving forward.</p><p class="lede-narrow">Carrington went from eight receptions and 89 yards in his first playing season at Western Michigan to 42 receptions, 637 yards and six touchdowns as a senior. Progress happened one phase at a time.</p></div>
           </section>
   - _type: visual_section
-    label: "October 22, 2016vs. Eastern Michigan"
-    content: |-
+    label: October 22, 2016vs. Eastern Michigan
+    content: >-
       <section class="section dark" aria-labelledby="performance-title">
             <div class="container"><p class="eyebrow">Career performance / 06</p><h2 id="performance-title">October 22, 2016<br>vs. Eastern Michigan</h2></div>
             <div class="scoreline"><div><p>Career highs helped No. 20 Western Michigan preserve its unbeaten record.</p><a class="text-link" href="https://wmubroncos.com/news/2016/10/22/football-no-20-wmu-keeps-perfect-record-in-tact-fights-past-emu.aspx">Read the official WMU recap →</a></div><div><span class="big">8</span><span class="label">Receptions</span></div><div><span class="big">177</span><span class="label">Receiving yards</span></div><div><span class="big">2</span><span class="label">Touchdowns</span></div></div>
           </section>
   - _type: visual_section
-    label: "The journey, documented."
-    content: |-
+    label: The journey, documented.
+    content: >-
       <section class="section" aria-labelledby="media-title">
             <div class="container"><div class="section-head"><div><p class="eyebrow">On record / 07</p><h2 id="media-title">The journey, documented.</h2></div><p>Official and publisher coverage gives the career story a clear source trail. Third-party photography is not republished without permission.</p></div>
               <div class="media-list">
@@ -103,8 +127,8 @@ content_blocks:
             </div>
           </section>
   - _type: visual_section
-    label: "Ready to put in the work?"
-    content: |-
+    label: Ready to put in the work?
+    content: >-
       <section class="section dark" aria-labelledby="book-title">
             <div class="container"><div class="section-head"><div><p class="eyebrow">Your next phase / 08</p><h2 id="book-title">Ready to put in the work?</h2></div><div><p>Current availability is flexible Monday–Friday, with Saturday sessions from 9:00 AM–12:00 PM. All times remain subject to confirmed bookings.</p><div class="button-row"><a class="button button-gold" href="/booking/">Book a Session</a><a class="button button-ghost" href="/contact/">Contact Carrington</a></div></div></div>
               <div class="availability"><div><p class="source">Monday–Friday</p><h3>Flexible / open</h3></div><div><p class="source">Saturday</p><h3>9:00 AM–12:00 PM</h3></div></div>
