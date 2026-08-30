@@ -20,7 +20,7 @@ Research date: 2026-08-30. Third-party links are used as attributed source cover
 
 1. Obtain written confirmation that the supplied images may be published and that people shown have appropriate consent.
 2. Request original full-resolution files plus creator/photographer credit.
-3. Replace the matching files in `assets/images/source/` without changing semantic placement.
+3. Replace the matching files in `public/assets/images/` without changing semantic placement.
 4. Regenerate responsive image derivatives using the documented asset command.
 5. Recheck crop at 375, 390, 768, 1024, and 1440 widths and update alt text to match the final image's purpose.
 6. If a third-party photo is licensed, record the license/permission date, permitted uses, required credit, and expiration here before adding it.

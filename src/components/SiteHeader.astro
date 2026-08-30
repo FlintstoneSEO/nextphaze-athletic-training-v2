@@ -2,6 +2,7 @@
 import siteData from "../data/site.json";
 const site = Astro.props.brand && Array.isArray(Astro.props.navigation) ? Astro.props : siteData;
 const { brand, navigation } = site;
+const currentPath = Astro.props.currentPath;
 ---
 
 <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -13,7 +14,7 @@ const { brand, navigation } = site;
     <button class="menu-button" type="button" aria-expanded="false" aria-controls="primary-navigation" data-menu-button>Menu</button>
     <nav class="primary-nav" id="primary-navigation" aria-label="Primary" data-menu data-editable="array" data-prop="@data[site].navigation">
       {navigation.map((item) => (
-        <a data-editable="array-item" class:list={{ "nav-cta": item.primary }} href={item.url}>
+        <a data-editable="array-item" class:list={{ "nav-cta": item.primary }} href={item.url} aria-current={currentPath === item.url ? "page" : undefined}>
           <span data-editable="text" data-prop="label">{item.label}</span>
         </a>
       ))}

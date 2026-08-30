@@ -1,6 +1,6 @@
 ---
 _schema: page_builder
-title: "Carrington Thompson Media &amp; Career Sources | NextPhaze"
+title: "Carrington Thompson Media & Career Sources | NextPhaze"
 description: "Explore official Western Michigan and West Michigan Ironmen coverage documenting Carrington Thompson's athletic journey."
 content_blocks:
   - _type: visual_section

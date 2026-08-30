@@ -7,7 +7,7 @@ const Component = componentMap[_type as keyof typeof componentMap];
 ---
 
 {Component && (
-  <section data-editable="array-item" data-component={_type}>
+  <div data-editable="array-item" data-component={_type}>
     <Component {...props} />
-  </section>
+  </div>
 )}

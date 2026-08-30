@@ -1,6 +1,19 @@
 ---
-const source = import.meta.glob("../../404.html", { eager: true, query: "?raw", import: "default" })["../../404.html"] as string;
-const head = source.match(/<head[^>]*>([\s\S]*?)<\/head>/i)?.[1] ?? "";
-const body = source.match(/<body[^>]*>([\s\S]*?)<\/body>/i)?.[1] ?? "";
+import BaseLayout from "../layouts/BaseLayout.astro";
 ---
-<!doctype html><html lang="en"><head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><Fragment set:html={head} /></head><body><Fragment set:html={body} /></body></html>
+
+<BaseLayout
+  title="Page Not Found | NextPhaze Athletic Training"
+  description="The requested NextPhaze Athletic Training page could not be found."
+  canonicalPath="/"
+  noindex
+>
+  <section class="page-hero" aria-labelledby="not-found-title">
+    <div class="container">
+      <p class="eyebrow">404 / Route missed</p>
+      <h1 id="not-found-title">That page is out of bounds.</h1>
+      <p class="lead">Return to NextPhaze or go straight to the training options.</p>
+      <div class="button-row"><a class="button button-gold" href="/">Back home</a><a class="button button-ghost" href="/training/">View training</a></div>
+    </div>
+  </section>
+</BaseLayout>
