@@ -1,0 +1,14 @@
+timezone: America/New_York
+paths:
+  static: public
+  uploads: public/assets/images
+
+_editables:
+  content:
+    bold: true
+    italic: true
+    link: true
+    bulletedlist: true
+    numberedlist: true
+    blockquote: true
+    format: "p h2 h3 h4"

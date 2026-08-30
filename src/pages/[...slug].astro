@@ -1,0 +1,42 @@
+---
+export function getStaticPaths() {
+  return [
+    { params: { slug: undefined } },
+    { params: { slug: "about" } },
+    { params: { slug: "training" } },
+    { params: { slug: "booking" } },
+    { params: { slug: "contact" } },
+    { params: { slug: "media" } },
+  ];
+}
+
+const pages = import.meta.glob(
+  "../../{index,about/index,training/index,booking/index,contact/index,media/index}.html",
+  { eager: true, query: "?raw", import: "default" },
+);
+
+const slug = Astro.params.slug ?? "";
+const sourcePath = slug ? `../../${slug}/index.html` : "../../index.html";
+const source = pages[sourcePath] as string | undefined;
+
+if (!source) {
+  return Astro.redirect("/404.html");
+}
+
+const head = source.match(/<head[^>]*>([\s\S]*?)<\/head>/i)?.[1] ?? "";
+const body = source.match(/<body[^>]*>([\s\S]*?)<\/body>/i)?.[1] ?? "";
+const title = head.match(/<title>([\s\S]*?)<\/title>/i)?.[1] ?? "NextPhaze Athletic Training";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title set:html={title} />
+    <Fragment set:html={head.replace(/<title>[\s\S]*?<\/title>/i, "").replace(/<meta charset=[^>]*>/i, "").replace(/<meta name="viewport"[^>]*>/i, "")} />
+  </head>
+  <body data-editable="source" data-path={sourcePath.replace("../../", "")} data-key={`page-${slug || "home"}`}>
+    <Fragment set:html={body} />
+  </body>
+</html>

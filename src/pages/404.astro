@@ -1,0 +1,6 @@
+---
+const source = import.meta.glob("../../404.html", { eager: true, query: "?raw", import: "default" })["../../404.html"] as string;
+const head = source.match(/<head[^>]*>([\s\S]*?)<\/head>/i)?.[1] ?? "";
+const body = source.match(/<body[^>]*>([\s\S]*?)<\/body>/i)?.[1] ?? "";
+---
+<!doctype html><html lang="en"><head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><Fragment set:html={head} /></head><body><Fragment set:html={body} /></body></html>

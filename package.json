@@ -4,8 +4,18 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "node scripts/serve.mjs",
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
     "check": "node scripts/check.mjs",
     "sitemap": "node scripts/generate-sitemap.mjs"
+  },
+  "dependencies": {
+    "@cloudcannon/editable-regions": "^0.0.19",
+    "astro": "^7.2.9"
+  },
+  "dependencies": {
+    "@cloudcannon/editable-regions": "^0.0.19",
+    "astro": "^7.2.9"
   }
 }
